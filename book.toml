@@ -1,0 +1,8 @@
+[book]
+title = "CT y2025"
+language = "ru"
+src = "src"
+
+[output.html]
+default-theme = "light"
+site-url = "/ct-y2025/"
