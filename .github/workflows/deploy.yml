@@ -10,6 +10,10 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,10 +22,21 @@ jobs:
       - uses: peaceiris/actions-mdbook@v1
         with:
           mdbook-version: 'latest'
-      - run: mdbook build
+      - name: Build with mdBook
+        run: mdbook build
+      - name: Ensure static assets are in the output
+        run: |
+          echo "== src/assets contents =="
+          ls -laR src/assets || true
+          mkdir -p book/assets/pdfs book/assets/html
+          cp -fv src/assets/pdfs/* book/assets/pdfs/ || true
+          cp -fv src/assets/html/* book/assets/html/ || true
+          echo "== book/assets contents =="
+          ls -laR book/assets || true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: book
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
