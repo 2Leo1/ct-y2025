@@ -25,6 +25,7 @@ jobs:
       - name: Build with mdBook
         run: mdbook build
       - name: Ensure static assets are in the output
+        if: always()
         run: |
           echo "== src/assets contents =="
           ls -laR src/assets || true
