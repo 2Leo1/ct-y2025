@@ -1,3 +1,3 @@
 # Линал — коллоквиум (PDF)
 
-[Открыть PDF](../assets/pdfs/Линал_коллок.pdf)
+[Открыть PDF](../assets/pdfs/Linal_kollok.pdf)

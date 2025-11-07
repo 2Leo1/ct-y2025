@@ -3,4 +3,4 @@
 Короткая навигация.
 
 - [Карточки](flashcards.md)
-- [PDF: Матан — теор. опрос](../assets/pdfs/Матан теор опрос.pdf)
+- [PDF: Матан — теор. опрос](../assets/pdfs/Matan_teor_opros.pdf)

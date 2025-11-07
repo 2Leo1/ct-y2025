@@ -2,4 +2,4 @@
 
 Материалы.
 
-- [PDF: Линал — коллоквиум](../assets/pdfs/Линал_коллок.pdf)
+- [PDF: Линал — коллоквиум](../assets/pdfs/Linal_kollok.pdf)
